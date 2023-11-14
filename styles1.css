@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: skyblue; /* Change the background color to sky blue */
+}
+
+#logo {
+    /* Use max-width instead of width to prevent overflow */
+    max-width: 300px; /* Adjust the logo width as needed */
+    height: 100px; /* Adjust the logo height as needed */
+    text-align: center;
+}
+
+#logo h1 {
+    text-indent: -9999px; /* Hide the text */
+    background: url('logo.png') no-repeat center center; /* Replace with your logo image URL */
+    background-size: contain; /* Scale the image to fit the logo size */
+}
+
+#logo span {
+    display: block; /* Display the text below the logo */
+    color: #333;
+    /* Use rem instead of px to make the font size relative to the root element */
+    font-size: 0.875rem;
+}
+
+textarea {
+    /* Use percentage instead of fixed width to make the element responsive */
+    width: 80%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 10px;
+    /* Use rem instead of px to make the font size relative to the root element */
+    font-size: 1rem;
+}
+
+#word-count, #sentence-count {
+    /* Use rem instead of px to make the font size relative to the root element */
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Use media query to change the font size of h1 based on the screen width */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw;
+    }
+}
