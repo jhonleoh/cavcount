@@ -45,6 +45,20 @@ textarea {
     /* Use rem instead of px to make the font size relative to the root element */
     font-size: 1.25rem;
     font-weight: bold;
+    display: flex; /* Use flexbox to align the icon and the text */
+    align-items: center; /* Vertically center the icon and the text */
+}
+
+#word-count img, #sentence-count img {
+    width: 32px; /* Adjust the icon width as needed */
+    height: 32px; /* Adjust the icon height as needed */
+    margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+/* Add a style rule for the wordmark image */
+#wordmark img {
+    display: block;
+    margin: 0 auto;
 }
 
 /* Use media query to change the font size of h1 based on the screen width */
