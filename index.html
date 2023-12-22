@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="styles1.css">
     <!-- Add the viewport meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Tesseract.js -->
+    <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js"></script>
 </head>
 <body>
     <div id="logo">
@@ -12,12 +14,15 @@
         <span>CAVCOUNT W&S V1.1</span>
     </div>
     <textarea id="text-input" placeholder="Type your text here..."></textarea>
-    <div id="word-count"><img src="word-icon.png" alt="Word Icon"> Word Count: 0</div>
-    <div id="sentence-count"><img src="sentence-icon.png" alt="Sentence Icon"> Sentence Count: 0</div>
+    <div id="word-count">Word Count: 0</div>
+    <div id="sentence-count">Sentence Count: 0</div>
     <!-- Add the wordmark logo below the sentence count -->
     <div id="wordmark" class="logo">
         <img src="wordmark.svg" alt="Wordmark logo">
     </div>
+    <!-- Add OCR Button -->
+    <input type="file" id="file-selector" accept="image/*">
+    <button id="start-ocr">Start OCR</button>
     <script src="script.js"></script>
 </body>
 </html>
