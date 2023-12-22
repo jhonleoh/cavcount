@@ -24,3 +24,21 @@ textInput.addEventListener('input', function() {
     wordCountElement.textContent = 'Word Count: ' + wordCount;
     sentenceCountElement.textContent = 'Sentence Count: ' + sentenceCount;
 });
+
+// OCR
+document.getElementById('start-ocr').addEventListener('click', function() {
+    var fileSelector = document.getElementById('file-selector');
+    if (fileSelector.files.length > 0) {
+        var file = fileSelector.files[0];
+        Tesseract.recognize(
+            file,
+            'eng',
+            {
+                logger: m => console.log(m)
+            }
+        ).then(({ data: { text } }) => {
+            textInput.value = text; // Set the recognized text as input
+            textInput.dispatchEvent(new Event('input')); // Trigger the input event to update counts
+        });
+    }
+});
